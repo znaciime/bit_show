@@ -1,0 +1,12 @@
+.svidiv{
+    margin-left:10px;
+}
+.head{
+    background-color: darkslategrey;
+}
+h2{
+    color: white;
+}
+select{
+float: right;
+}
