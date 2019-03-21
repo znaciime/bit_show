@@ -15,28 +15,32 @@ const uiModule = (function () {
             const rating = $("<p>").text(`rating: ${element.rating} `)
 
             blok.addClass("svidiv")
+            blok.attr("id", `${element.id}`)
             blok.append(images, name, rating)
             $(".imgsetup").append(blok)
-            const displayList = [];
-            displayList.push(`${element.name}`);
-            const selctopt = $("#sel");
-            selctopt.append($('<option>', { value: 1, text: `${element.name}` }));
 
+            $(".svidiv").on("click", function () {
+                const id = $(this).attr("id");
+                localStorage.setItem("showname", id);
+                console.log(id);
+
+                window.open("index2.html");
+
+
+
+
+
+            })
 
 
         })
 
     }
-    $("select").on("keydown", function () {
-        if (keyCode === 13) {
-            const send = $(this, "option").val();
-            localStorage.setItem("send", send);
-            console.log(localStorage.getItem("send"))
-        }
 
 
 
-    })
+
+
 
 
 
