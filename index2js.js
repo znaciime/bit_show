@@ -15,6 +15,18 @@ const index2 = (() => {
             listactors.append(listNames);
 
         });
+        const seasonList = [];
+        const seasonUl = $(".seasons");
+
+        singleShowData._embedded.seasons.forEach(Element => {
+            const listseasons = $("<li>").text(`${Element.premiereDate}- ${Element.endDate}`)
+            seasonList.push(`${Element.premiereDate}- ${Element.endDate}`);
+            seasonUl.append(listseasons);
+
+        });
+
+
+
 
         const foot = $(".foot");
         const cast = $(".cast");

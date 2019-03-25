@@ -5,4 +5,8 @@
 .bot{
     background-color: darkslategrey;
     color: white;
+    font-size:0.5em; 
+}
+img{
+    height: 400px;
 }

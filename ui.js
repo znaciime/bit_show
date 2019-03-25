@@ -1,11 +1,11 @@
 const uiModule = (function () {
 
 
-    function displayShows(myShows) {
-        console.log("displayShows", myShows);
+    function displayShows(shows) {
+        console.log("displayShows", shows);
 
         const displayMovies = []
-        myShows.forEach(function (element) {
+        shows.forEach(function (element) {
 
             displayMovies.push(element.image)
             const blok = $("<div>");
