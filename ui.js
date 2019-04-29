@@ -18,13 +18,13 @@ console.log(text.val())
 
     function displayShows(shows) {
         console.log("displayShows", shows);
-let filteredShows=shows;
+
 
  
 
 
                 
-        filteredShows.forEach(function (element) {
+        shows.forEach(function (element) {
          
             // if(element.name.includes(text.val())){
 
@@ -40,6 +40,7 @@ let filteredShows=shows;
             const rating = $("<p>").text(`rating: ${element.rating} `)
 
             blok.addClass("svidiv")
+            
             blok.attr("id", `${element.id}`)
             blok.append(images, name, rating)
             $(".imgsetup").append(blok)
@@ -60,8 +61,9 @@ let filteredShows=shows;
    text.on('change', function(event){
             event.preventDefault();
                 console.log(text.val());
-                filteredShows=shows.filter(element=> element.name.toLowerCase().includes(text.val()));
-                console.log(filteredShows)
+               const filteredShows=shows.filter(element=> element.name.toLowerCase().includes(text.val()));
+                console.log(filteredShows);
+                $(".svidiv").remove();
                 filteredShows.forEach(function (element) {
          
                     
@@ -71,12 +73,12 @@ let filteredShows=shows;
                     const name = $("<p>").text(` ${element.name} `)
                     const rating = $("<p>").text(`rating: ${element.rating} `)
         
-                    blok.addClass("oneshow row")
+                    blok.addClass("svidiv")
                     blok.attr("id", `${element.id}`)
                     blok.append(images, name, rating)
                     $(".imgsetup").append(blok)
-                    $(".svidiv").css("visibility: hidden");
-                    $(".oneshow").on("click", function () {
+                    
+                    $(".svidiv").on("click", function () {
                         const id = $(this).attr("id");
                         localStorage.setItem("showname", id);
                         console.log(id);
@@ -84,9 +86,7 @@ let filteredShows=shows;
                         window.open("index2.html");
         
                     })
-                    if(text.val()===""){
-                        $(".svidiv").css("visibility: visible")
-                    }
+                   
 
               
         

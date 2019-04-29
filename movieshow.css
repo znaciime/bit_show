@@ -1,5 +1,6 @@
 .svidiv{
     margin-left:10px;
+    
 
 }
 .head{
@@ -13,12 +14,4 @@ float: right;
 width: 90%;
 border-radius: 20px;
 }
-.hide{
-   visibility: hidden;
-}
-.oneshow{
-visibility: visible;
-position: absolute;
-top: 10px;
-z-index: 11;
-}
+
