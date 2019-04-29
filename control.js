@@ -4,7 +4,9 @@ const controller = (function (data, ui) {
         console.log("App initialized");
         data.fetchShows()
             .then((shows) => {
-                ui.displayShows(shows)
+                ui.displayShows(shows);
+                
+
             })
 
         console.log("CTRL", Response);

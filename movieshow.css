@@ -1,5 +1,6 @@
 .svidiv{
     margin-left:10px;
+
 }
 .head{
     background-color: darkslategrey;
@@ -9,6 +10,15 @@ h2{
 }
 input{
 float: right;
-width: 300px;
+width: 90%;
 border-radius: 20px;
+}
+.hide{
+   visibility: hidden;
+}
+.oneshow{
+visibility: visible;
+position: absolute;
+top: 10px;
+z-index: 11;
 }
