@@ -17,7 +17,7 @@ const dataModule = (() => {
             .then((responseShows) => {
                 console.log(responseShows);
                 const shows = responseShows
-                    .slice(0, 50)
+                    
                     .map((shows) => {
                         // const { id, name, image, rating } = show;
                         return new Show(shows.id, shows.name, shows.image.medium, shows.rating.average)
